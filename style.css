@@ -86,6 +86,7 @@
 	/* A few variables from blast */
 	--yellow-100: rgba(252,253, 199, 1);
 	--camo-100: rgba(195,212, 165, 1);
+	--camo-400: rgba(117, 131, 93, 1);
 	--camo-500: rgba(64,72, 51, 1);
 	--font-geom-graphic:"__geomGraphic_d69ff7","__geomGraphic_Fallback_d69ff7";
 
@@ -96,31 +97,39 @@
 	
 }
 
-.blast-h1 {
-
-}
-
-.blast-h2 {
-
-}
-
 html {
+	background: var(--background);
 }
 
 body {
+	margin-block: 4rem;
+}
+
+.page-wrapper {
 	line-height: 1.125;
 	color: var(--text-primary);
-	background: var(--background);
 	font-family: "Helvetica";
-	max-width: calc(100% - 3rem);
+	max-width: calc(100% - 4rem);
 	margin-inline: auto;
-	margin-block: 4rem;
+	border: 1px solid var(--camo-500);
+	border-radius: 8px;
+	padding: 0 1rem 1rem 1rem;
+}
+
+h1:before {
+	content: "\A\A\A";
+	display: block;
+	height: 40px;
+	width: calc(100% + 32px);
+	overflow: visible;
+	border-bottom: 1px solid var(--camo-400);
+	margin-left: -16px;
+	margin-bottom: 16px;
 }
 
 p {
 	margin-top: 0;
 }
-
 
 h1 {
 	--tw-text-opacity: 1;
