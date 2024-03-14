@@ -323,7 +323,9 @@ aside > .wrapper {
 	li:hover {
 		/* Note that this abuses the HTML and its intent. 
 		There are a tags embedded in the lines of the nav, but this CSS is assuming the entire li 
-		is clickable, not individual portions.  */
+		is clickable, not individual portions. 
+		For example, in `<design> by <author>`, the design and author will link to different pages.
+		 */
 		background: white;
 		color: black;
 		border-radius: 6px;
