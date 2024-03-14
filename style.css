@@ -106,6 +106,7 @@ body {
 }
 
 .page-wrapper {
+	position: absolute;
 	line-height: 1.125;
 	color: var(--text-primary);
 	font-family: "Helvetica";
@@ -231,30 +232,6 @@ abbr {
 	border-bottom: none;
 }
 
-
-/* specific divs */
-.page-wrapper {
-}
-
-.intro {
-}
-
-header {
-}
-
-.summary {
-	}
-
-/* Make this an interesting summary */
-.summary p {
-}
-
-.preamble {
-}
-
-.supporting {
-}
-
 footer {
 	margin-block: 2rem;
 	text-align: center;
@@ -265,76 +242,102 @@ footer a:visited {
 	margin-right: 20px;
 }
 
-.sidebar {
-	display: none; /* TODO: hiding */
-	margin-left: 600px;
+/* Sidebar */
+
+aside {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 20px;
+	left: 0;
+	width: 100%;
 }
 
-.sidebar .wrapper {
-	font: 10px verdana, sans-serif;
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
-	padding: 10px;
-	margin-top: 150px;
-	width: 130px;
-}
-
-.sidebar h3.select {
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-	margin: 10px 0 5px 0;
-	width: 97px;
-	height: 16px;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.sidebar h3.archives {
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-	margin: 25px 0 5px 0;
-	width: 57px;
-	height: 14px;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.sidebar h3.resources {
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-	margin: 25px 0 5px 0;
-	width: 63px;
-	height: 10px;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-
-.sidebar ul {
+aside h3 {
+	padding: 0.25rem 0;
 	margin: 0;
-	padding: 0;
+	font-size: 14px;
+	text-align: center;
+
+	&:hover {
+		cursor: default;
+	}
 }
 
-.sidebar li {
-	line-height: 1.3em;
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-	display: block;
-	padding-top: 5px;
-	margin-bottom: 5px;
-	list-style-type: none;
+aside > .wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	padding: 0 .125rem;
 }
 
-.sidebar li a:link {
-	color: #988F5E;
+.design-selection,
+.design-archives,
+.zen-resources {
+	position: relative;
 }
 
-.sidebar li a:visited {
-	color: #B3AE94;
+.design-selection nav,
+.design-archives nav,
+.zen-resources ul {
+	position: absolute;
+	top: calc(100%);
+	background: var(--background);
+	border: 1px solid var(--camo-500);
+	border-radius: 2px;
+	width: 200%;
+	max-width: 250px;
+	min-width: 200px;
 }
 
+.zen-resources ul {
+	right: 0%;
+}
 
+.design-selection nav,
+.design-archives nav,
+.zen-resources ul {
+  display: none;
+}
+
+.design-selection:hover nav,
+.design-archives:hover nav,
+.zen-resources:hover ul {
+  display: block;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+	nav {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		margin: auto;
+		padding: .75rem;
+	}
+	li {
+		list-style-type: none;
+		padding: 0.25rem 0.5rem;
+	}
+
+	li:hover {
+		/* Note that this abuses the HTML and its intent. 
+		There are a tags embedded in the lines of the nav, but this CSS is assuming the entire li 
+		is clickable, not individual portions.  */
+		background: white;
+		color: black;
+		border-radius: 6px;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+abbr {
+	text-decoration: none;
+}
+
+.indicator {
+	display: none;
+}
