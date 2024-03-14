@@ -102,7 +102,7 @@ html {
 }
 
 body {
-	margin-block: 4rem;
+	margin-block: 2rem;
 }
 
 .page-wrapper {
@@ -112,20 +112,9 @@ body {
 	font-family: "Helvetica";
 	max-width: calc(100% - 4rem);
 	margin-inline: auto;
-	border: 1px solid var(--camo-500);
+	border: 2px solid var(--camo-500);
 	border-radius: 8px;
 	padding: 0 1rem 1rem 1rem;
-}
-
-h1:before {
-	content: "\A\A\A";
-	display: block;
-	height: 40px;
-	width: calc(100% + 32px);
-	overflow: visible;
-	border-bottom: 1px solid var(--camo-400);
-	margin-left: -16px;
-	margin-bottom: 16px;
 }
 
 p {
@@ -139,6 +128,7 @@ h1 {
     font-size: 32px;
     line-height: 130%;
     font-weight: 600;
+	margin-top: 80px;
 
 }
 
@@ -246,9 +236,11 @@ footer a:visited {
 
 aside {
 	position: absolute;
-	top: 20px;
+	top: 1rem;
 	left: 0;
 	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid var(--camo-400);
 }
 
 aside h3 {
