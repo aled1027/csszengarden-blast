@@ -236,11 +236,14 @@ footer a:visited {
 
 aside {
 	position: absolute;
-	top: 1rem;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 40px;
+	height: 60px;
 	border-bottom: 2px solid var(--camo-400);
+
+	/* Work in progress, adding some background variants around the black,yellow, and camo colors */
+	/* background-image: linear-gradient( rgba(17,20,12,0.95), var(--camo-400)); */
 }
 
 aside h3 {
@@ -259,6 +262,8 @@ aside > .wrapper {
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
 	padding: 0 .125rem;
+	align-items: center;
+	height: 100%;
 }
 
 .design-selection,

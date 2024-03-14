@@ -14,5 +14,4 @@ live-server .
 ## If this project were to continue:
 
 - Make the sections with the surface background color
-- Add back the aside
-- Add the tab-like features at the top for navigation
+- Add the gradients
