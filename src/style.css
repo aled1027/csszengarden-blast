@@ -7,188 +7,325 @@
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
+/* @font-face { */
+	/* https://fontesk.com/geom-typeface/ */
+	/* font-family: "Geom"; */
+	/* src: url('/static/geom/fonts/woff2/Geom-Bold.woff2') format('woff2'); */
+	/* src: url('https://blast.io/_next/static/media/5a6b09989bbc7e26-s.p.otf') format('opentype'); */
+/* } */
+
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/5a6b09989bbc7e26-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/4ecfb2be5dd500d3-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:400;
+    font-style:italic
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/ea544583ab0fe804-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:700;
+    font-style:normal
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/29b6980237fb89e3-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:700;
+    font-style:italic
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/e42fa8645ef1ca1d-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:300;
+    font-style:normal
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/c97911eb00fa4908-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:300;
+    font-style:italic
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/fe56d5dce41a32b8-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:600;
+    font-style:normal
+}
+@font-face{
+    font-family:__geomGraphic_d69ff7;
+    src:url(/static/fonts/e969fdcb8f3bfdd2-s.p.otf) format("opentype");
+    font-display:swap;
+    font-weight:600;
+    font-style:italic
+}
+@font-face{
+    font-family:__geomGraphic_Fallback_d69ff7;
+    src:local("Arial");
+    ascent-override:79.98%;
+    descent-override:19.48%;
+    line-gap-override:0.00%;
+    size-adjust:120.66%
+}
+
 
 /* basic elements */
+:root {
+
+	/* A few variables from blast */
+	--yellow-100: rgba(252,253, 199, 1);
+	--camo-100: rgba(195,212, 165, 1);
+	--camo-500: rgba(64,72, 51, 1);
+	--font-geom-graphic:"__geomGraphic_d69ff7","__geomGraphic_Fallback_d69ff7";
+
+	--background: #12140C;
+	--text-primary: var(--yellow-100);
+	--color-primary: yellow;
+	--color-secondary: orange;
+	
+}
+
+.blast-h1 {
+
+}
+
+.blast-h2 {
+
+}
+
 html {
-	margin: 0;
-	padding: 0;
+}
+
+body {
+	line-height: 1.125;
+	color: var(--text-primary);
+	background: var(--background);
+	font-family: "Helvetica";
+	max-width: calc(100% - 3rem);
+	margin-inline: auto;
+	margin-block: 4rem;
+}
+
+p {
+	margin-top: 0;
+}
+
+
+h1 {
+	--tw-text-opacity: 1;
+	color: var(--yellow-100);
+	font-family: var(--font-geom-graphic);
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 600;
+
+}
+
+h2 {
+	--tw-text-opacity: 1;
+	color: var(--camo-100);
+	font-family: var(--font-geom-graphic);
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 600;
+}
+
+h3 {
+	font-size: 20px;
+	color: var(--yellow-100);
+	font-family: var(--font-geom-graphic);
+    line-height: 130%;
+    font-weight: 600;
+}
+
+/* section:after { */
+div[role=article]:after {
+    display: inline-block;
+    content: url("data:image/svg+xml,%3Csvg  color='rgb(64,72, 51)' height='15' width='1177' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M653.476 7.969h29.202v6.489h-29.202zM.918 7.969H30.12v6.489H.918zM701.334 7.969h29.202v6.489h-29.202zM48.776 7.969h29.202v6.489H48.776zM511 7.965h138.691v6.489H511zM1077.49 7.965h64v6.489h-64zM944.612 7.969h29.202v6.489h-29.202zM690.465 7.969h3.082v6.489h-3.082zM37.907 7.969h3.082v6.489h-3.082zM751.303 7.969h3.082v6.489h-3.082zM98.745 7.969h3.082v6.489h-3.082zM756.333 7.969h3.082v6.489h-3.082zM103.774 7.969h3.082v6.489h-3.082zM868.686 7.969h3.082v6.489h-3.082zM873.715 7.965h3.082v6.489h-3.082zM1145.94 7.965h3.082v6.489h-3.082zM1159.67 7.965h3.082v6.489h-3.082zM1173.41 7.965h3.082v6.489h-3.082zM937.744 7.969h3.082v6.489h-3.082zM821.226 7.969h3.082v6.489h-3.082zM168.668 7.969h3.082v6.489h-3.082z' fill='currentColor'%3E%3C/path%3E%3Ccircle cx='843.128' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='916.059' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='979.06' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='847.995' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='920.926' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='983.927' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='852.862' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='925.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='988.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Cpath d='M1176 1 0 1.01M458.489 1l-12.5 12.5h-230.5' stroke='currentColor' stroke-width='1.5'%3E%3C/path%3E%3C/svg%3E");
+    max-width: 100%;
+	overflow: hidden;
+}
+
+/* Do some schenagingans to make the links buttony and hide everything else */
+.summary > p:nth-child(2) {
+	/* Hide the non-link text */
+	font-size: 0;
+	margin-bottom: 20px;
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+}
+
+.summary > p:nth-child(2) a {
+	/* Set the font-size to initial to re-show this */
+	font-size: initial;
+
+	/* Style like a button */
+	background: var(--color-primary);
+	color: black;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+
+
+	border: 1px solid;
+	border-radius: 4px;
+	padding: 6px calc(10vw);
+
+
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	clip-path: polygon(20px 0,100% 0,100% 50%,calc(100% - 20px) 100%,0 100%,0 50%);
+	transition-property: background-color, border-color;
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+	transition-duration: .15s; 
+
+	&:hover {
+		background: white;
 	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
+
+	&:before {
+		/* TODO: change to download icon */
+		display: block;
+		text-transform: capitalize;
+		font-weight: 400;
+		font-size: small;
+		content: "Download ";
+		text-align: center;
 	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
+}
+
+a:link {
+	color: var(--text-primary);
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
 abbr {
 	border-bottom: none;
-	}
+}
 
 
 /* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
+.page-wrapper {
+}
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
+.intro {
+}
 
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 header {
-	padding-top: 20px;
-	height: 87px;
 }
 
 .summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
 	}
+
+/* Make this an interesting summary */
 .summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+}
 
 .preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+.supporting {
+}
+
+footer {
+	margin-block: 2rem;
+	text-align: center;
+}
+
+footer a:link,
+footer a:visited {
+	margin-right: 20px;
+}
 
 .sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
+	display: none; /* TODO: hiding */
+	margin-left: 600px;
+	position: absolute;
+	top: 0;
 	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+}
+
+.sidebar .wrapper {
+	font: 10px verdana, sans-serif;
+	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+	padding: 10px;
+	margin-top: 150px;
+	width: 130px;
+}
+
+.sidebar h3.select {
+	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+	margin: 10px 0 5px 0;
+	width: 97px;
+	height: 16px;
 
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+}
+
+.sidebar h3.archives {
+	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+	width: 57px;
+	height: 14px;
 
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+}
+
+.sidebar h3.resources {
+	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+	width: 63px;
+	height: 10px;
 
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	}
+}
 
 
 .sidebar ul {
 	margin: 0;
 	padding: 0;
-	}
+}
+
 .sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
+	line-height: 1.3em;
+	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+	display: block;
+	padding-top: 5px;
 	margin-bottom: 5px;
 	list-style-type: none;
-	}
+}
+
 .sidebar li a:link {
 	color: #988F5E;
-	}
+}
+
 .sidebar li a:visited {
 	color: #B3AE94;
-	}
+}
 
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
