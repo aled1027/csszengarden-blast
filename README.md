@@ -10,3 +10,9 @@ You can see it on github pages: [https://aled1027.github.io/csszengarden-blast/]
 npm install -g live-server
 live-server .
 ```
+
+## If this project were to continue:
+
+- Make the sections with the surface background color
+- Add back the aside
+- Add the tab-like features at the top for navigation
