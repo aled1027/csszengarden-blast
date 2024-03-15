@@ -90,7 +90,8 @@
 	--camo-500: rgba(64,72, 51, 1);
 	--font-geom-graphic:"__geomGraphic_d69ff7","__geomGraphic_Fallback_d69ff7";
 
-	--background: #12140C;
+	--background-primary: #12140C;
+	--background-secondary: #252b1b;
 	--text-primary: var(--yellow-100);
 	--color-primary: yellow;
 	--color-secondary: orange;
@@ -98,7 +99,7 @@
 }
 
 html {
-	background: var(--background);
+	background: var(--background-primary);
 }
 
 body {
@@ -108,7 +109,7 @@ body {
 
 .page-wrapper {
 	position: relative;
-	line-height: 1.125;
+	line-height: 1.25;
 	color: var(--text-primary);
 	font-family: "Helvetica";
 	max-width: calc(100% - 4rem);
@@ -116,10 +117,11 @@ body {
 	border: 2px solid var(--camo-500);
 	border-radius: 8px;
 	padding: 0 1rem 1rem 1rem;
+	background: var(--background-secondary);
 }
 
 p {
-	margin-top: 0;
+	margin-top: 1.5rem;
 }
 
 h1 {
@@ -153,9 +155,10 @@ h3 {
 /* section:after { */
 div[role=article]:after {
     display: inline-block;
-    content: url("data:image/svg+xml,%3Csvg  color='rgb(64,72, 51)' height='15' width='1177' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M653.476 7.969h29.202v6.489h-29.202zM.918 7.969H30.12v6.489H.918zM701.334 7.969h29.202v6.489h-29.202zM48.776 7.969h29.202v6.489H48.776zM511 7.965h138.691v6.489H511zM1077.49 7.965h64v6.489h-64zM944.612 7.969h29.202v6.489h-29.202zM690.465 7.969h3.082v6.489h-3.082zM37.907 7.969h3.082v6.489h-3.082zM751.303 7.969h3.082v6.489h-3.082zM98.745 7.969h3.082v6.489h-3.082zM756.333 7.969h3.082v6.489h-3.082zM103.774 7.969h3.082v6.489h-3.082zM868.686 7.969h3.082v6.489h-3.082zM873.715 7.965h3.082v6.489h-3.082zM1145.94 7.965h3.082v6.489h-3.082zM1159.67 7.965h3.082v6.489h-3.082zM1173.41 7.965h3.082v6.489h-3.082zM937.744 7.969h3.082v6.489h-3.082zM821.226 7.969h3.082v6.489h-3.082zM168.668 7.969h3.082v6.489h-3.082z' fill='currentColor'%3E%3C/path%3E%3Ccircle cx='843.128' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='916.059' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='979.06' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='847.995' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='920.926' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='983.927' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='852.862' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='925.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='988.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Cpath d='M1176 1 0 1.01M458.489 1l-12.5 12.5h-230.5' stroke='currentColor' stroke-width='1.5'%3E%3C/path%3E%3C/svg%3E");
+    content: url("data:image/svg+xml,%3Csvg  color='rgb(64,72, 51)' height='15' width='1177' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M653.476 7.969h29.202v6.489h-29.202zM.918 7.969H30.12v6.489H.918zM701.334 7.969h29.202v6.489h-29.202zM48.776 7.969h29.202v6.489H48.776zM511 7.965h138.691v6.489H511zM1077.49 7.965h64v6.489h-64zM944.612 7.969h29.202v6.489h-29.202zM690.465 7.969h3.082v6.489h-3.082zM37.907 7.969h3.082v6.489h-3.082zM751.303 7.969h3.082v6.489h-3.082zM98.745 7.969h3.082v6.489h-3.082zM756.333 7.969h3.082v6.489h-3.082zM103.774 7.969h3.082v6.489h-3.082zM868.686 7.969h3.082v6.489h-3.082zM873.715 7.965h3.082v6.489h-3.082zM1145.94 7.965h3.082v6.489h-3.082zM1159.67 7.965h3.082v6.489h-3.082zM1173.41 7.965h3.082v6.489h-3.082zM937.744 7.969h3.082v6.489h-3.082zM821.226 7.969h3.082v6.489h-3.082zM168.668 7.969h3.082v6.489h-3.082z' fill='currentColor'%3E%3C/path%3E%3Ccircle cx='843.128' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='916.059' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='979.06' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='847.995' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='920.926' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='983.927' cy='11.374' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='852.862' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='925.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Ccircle cx='988.794' cy='11.37' fill='currentColor' r='1.46'%3E%3C/circle%3E%3Cpath d='M1176 1 0 1.01M458.489 1l-12.5 12.5h-230.5' stroke='currentColor' stroke-width='1.5'%3E%3C/path%3E%3C/svg%3E");
     max-width: 100%;
 	overflow: hidden;
+	margin-top: 1rem;
 }
 
 /* Do some schenagingans to make the links buttony and hide everything else */
