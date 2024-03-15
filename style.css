@@ -107,6 +107,13 @@ body {
 	margin-inline: 0;
 }
 
+@media (max-width: 600px) {
+	.page-wrapper:before {
+		content: "Menu is not supported on touch screens";
+		font-size: 10px;
+	}
+}
+
 .page-wrapper {
 	position: relative;
 	line-height: 1.25;
