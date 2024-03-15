@@ -311,6 +311,9 @@ aside > .wrapper {
 .design-selection:focus nav,
 .design-archives:hover nav,
 .zen-resources:hover ul {
+  /* This is only working on screens with mouses right now
+  There's a warning on .page-wrapper: before
+  */
   display: block;
 }
 
